@@ -1,0 +1,24 @@
+export interface FactorEnrollResponse {
+  id: string;
+  factorType: string;
+  provider: string;
+  vendorName: string;
+  status: string;
+  created: string;
+  lastUpdated: string;
+  _embedded: {
+    activation: {
+      timeStep: number;
+      sharedSecret: string;
+      encoding: string;
+      keyLength: number;
+      factorResult: string;
+      _links: {
+        qrcode: {
+          href: string;
+          type: string;
+        };
+      };
+    };
+  };
+}
